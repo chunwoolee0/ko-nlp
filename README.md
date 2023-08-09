@@ -6,7 +6,7 @@ Hugging face에 있는 datasets를 이용해서 한국어 자연어처리에서 
 
 이러한 단점으로 인해 한국어 처리에 있어 퇴보를 가져올 수 있기에, 그냥 hugging face에 있는 것만으로 한국어 처리를 하는 작업을 보여주는 것이 필요하기에 이러한 일을 하게 되었다. 이는 이미 많은 다른 이들이 오래전부터 해오던 일이지만 관련 notebook이 올라와 있는 경우도 드물고, 친절한 설명도 없는 것이 단점인데, 여기서는 친절한 설명까지는 부족해도 관련 notebook 파일을 올려놓고자 한다
 
-## Tasks for korean nlp by pipelines
+## Tasks for korean nlp
 Common NLP tasks
 
 - Token Classification
