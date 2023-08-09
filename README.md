@@ -43,6 +43,10 @@ Common NLP tasks
 - Summarization
   긴 문장이 있어 읽기 힘들 때 이를 간단히 요약하는 일로 ko_nl-_tasks.ipynb 에서 발견할 수 있다. 
 - Translation
+  영어를 한국어로, 한국어를 영어로 바꾸어주는 프로그램이다. translation_en_kr.ipynb, translation_ko_en.ipynb 참조. 영어를 한국어로 번역하는 pretrained 모델로 Helsinki-NLP/opus-mt-tc-big-en-ko가 작동을 해야 하는데 엉뚱한 결과를 주기 때문에 circulus/kobart-trans-en-ko-v2 를 썼다. 
+  - fine-tuned model: chunwoolee0/kd4_opus-mt-ko-en, chunwoolee0/circulus-kobart-en-to-ko
+  - datasets used: kde4 en-ko
+  - pretrained model ckeckpoint: Helsinki-NLP/opus-mt-ko-en, circulus/kobart-trans-en-ko-v2
 - Causal Language Modeling (koGPT-2)
    이런 일을 하기 위해 만들어진 것이 GPT이다. skt/kogpt2-v2를 써서 문장 생성하는 예를 역시 ko_nl-_tasks.ipynb 에서 발견할 수 있다. 
   - Sentence Generation
@@ -50,5 +54,9 @@ Common NLP tasks
     - datasets used: nsmc
     - pretrained model ckeckpoint: skt/kogpt2-base-v2
 - Question Answering
+  질문을 하면 주어진 지문(contexts)에서 답을 찾는 프로그램으로 nlp_course_korquad.ipynb를 참조. 데이터 셋이 너무 커서 20000개만 선택. 답은 제대로 찾으나 조퍼리를 못함. 
+  - fine-tuned model: chunwoolee0/roberta-keti-air-korquad
+  - datasets used: KETI-AIR/korquad v1.0 (v2.0도 있음)
+  - pretrained model ckeckpoint: klue/roberta-base
 
 
