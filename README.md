@@ -11,33 +11,40 @@ Common NLP tasks
 
 - Token Classification
   - NER (named entity recognition)
+    문장 내에서 인명(PS), 기관(OG), 장소(LC), 양(QT), 날짜/시간(DT)를 인식해서 꼬리표(named entity recognition)를 달아주는 프로그램이다. 모델 klue/roberta-base를 써서 klue/ner 데이터셋을 가지고 파인튜닝을 한다. klue_ner_roberta_train.ipynb에서 코드를 볼 수 있다. 
     - fine-tuned model: chunwoolee0/klue_ner_roberta_model
     - datasets used: klue-ner
     - pretrained model ckeckpoint: klue/roberta-base
   - Part-of-speech tagging (POS)
 - Sequence classification
   - Sentiment Classification
+    문장을 보고 긍정적인 내용인지, 부정적인 내용인지를 판별하는 프로그램이다. 역시 klue/roberta-base 모델을 써서 nsmc 데이터셋을 가지고 파인튜닝을 한다. doccls_nsmc.ipynb 쥬피터 노트북을 참조바람.
     - fine-tuned model: chunwoolee0/nsmc_roberta_base_model
     - datasets used: nsmc
     - label: ['positive', 'negative']
     - pretrained model ckeckpoint: klue/roberta-base
   - Document Subject Classification
+    기사를 보고 IT과학, 경제, 사회, 생활경제, 세계, 스포트, 정치 어떤 분야의 기사인지를 판별하는 프로그램. klue_ynat_train.ipynb를 참조
     - fine-tuned model: chunwoolee0/klue_ynat_roberta_base_model
     - datasets used: klue/ynat
     - label: ['IT과학','경제','사회','생활문화','세계',
     '스포츠','정치]
     - pretrained model ckeckpoint: klue/roberta-base
   - Pair Classification
+    전제를 보고 가정이 전제에 따르는지 (entailment), 전제와 모순이 되는지, 관계가 없는지를 판별하는 프로그램. klue_nli_roberta_train.ipynb를 참조
     - fine-tuned model: chunwoolee0/klue_nli_roberta_base_model
     - datasets used: klue/nli
     - sentence1, sentence2
     - label: ['entailment', 'contradiction','neutral]
     - pretrained model ckeckpoint: klue/roberta-base
 - Masked Language Modeling
+  이 경우는 "대한민국의 대통령은 [MASK] 이다."와 같이 [MASK]를 채우는 문제인데 jklue/bert-base, klue-roberta-base가 이런 목적으로 만들어진 모델이기 때문에 따로 파인튜닝을 하지 않고 이들 모델을 써서 pipeline을 써서 [MASK]를 찾는 일을 수행할 수 있다. 관련된 작업은 ko_nl-_tasks.ipynb 에서 발견할 수 있다. 
   - pretrained model ckeckpoint: klue/roberta-base
 - Summarization
+  긴 문장이 있어 읽기 힘들 때 이를 간단히 요약하는 일로 ko_nl-_tasks.ipynb 에서 발견할 수 있다. 
 - Translation
 - Causal Language Modeling (koGPT-2)
+   이런 일을 하기 위해 만들어진 것이 GPT이다. skt/kogpt2-v2를 써서 문장 생성하는 예를 역시 ko_nl-_tasks.ipynb 에서 발견할 수 있다. 
   - Sentence Generation
     - fine-tuned model: chunwoolee0/klue_nli_roberta_base_model
     - datasets used: nsmc
