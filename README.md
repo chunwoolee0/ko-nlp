@@ -54,7 +54,7 @@ Common NLP tasks
     - datasets used: nsmc
     - pretrained model ckeckpoint: skt/kogpt2-base-v2
 - Question Answering
-  질문을 하면 주어진 지문(contexts)에서 답을 찾는 프로그램으로 nlp_course_korquad.ipynb를 참조. 데이터 셋이 너무 커서 20000개만 선택. 답은 제대로 찾으나 조퍼리를 못함. 
+  질문을 하면 주어진 지문(contexts)에서 답을 찾는 프로그램으로 nlp_course_korquad.ipynb를 참조. 데이터 셋이 너무 커서 20000개만 선택. 답은 제대로 찾으나 조사 처리를 제대로 못함. 
   - fine-tuned model: chunwoolee0/roberta-keti-air-korquad
   - datasets used: KETI-AIR/korquad v1.0 (v2.0도 있음)
   - pretrained model ckeckpoint: klue/roberta-base
