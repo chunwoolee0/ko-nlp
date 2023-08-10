@@ -11,7 +11,7 @@ Common NLP tasks
 
 - Token Classification
   - NER (named entity recognition)
-    문장 내에서 인명(PS), 기관(OG), 장소(LC), 양(QT), 날짜/시간(DT)를 인식해서 꼬리표(named entity recognition)를 달아주는 프로그램이다. 모델 klue/roberta-base를 써서 klue/ner 데이터셋을 가지고 파인튜닝을 한다. klue_ner_roberta_train.ipynb에서 코드를 볼 수 있다. 
+    문장 내에서 인명(PS), 기관(OG), 장소(LC), 양(QT), 날짜/시간(DT)를 인식해서 꼬리표(named entity recognition)를 달아주는 프로그램이다. 모델 klue/roberta-base를 써서 klue/ner 데이터셋을 가지고 파인튜닝을 한다. klue_ner_roberta_train.ipynb 쥬피터 노트북 참조. 
     - fine-tuned model: chunwoolee0/klue_ner_roberta_model
     - datasets used: klue-ner
     - pretrained model ckeckpoint: klue/roberta-base
