@@ -41,14 +41,14 @@ Common NLP tasks
   이 경우는 "대한민국의 대통령은 [MASK] 이다."와 같이 [MASK]를 채우는 문제인데 jklue/bert-base, klue-roberta-base가 이런 목적으로 만들어진 모델이기 때문에 따로 파인튜닝을 하지 않고 이들 모델을 써서 pipeline을 써서 [MASK]를 찾는 일을 수행할 수 있다. 관련된 작업은 ko_nlp_tasks.ipynb 에서 발견할 수 있다. 
   - pretrained model ckeckpoint: klue/roberta-base
 - Summarization
-  긴 문장이 있어 읽기 힘들 때 이를 간단히 요약하는 일로 ko_nl-_tasks.ipynb 에서 발견할 수 있다. 
+  긴 문장이 있어 읽기 힘들 때 이를 간단히 요약하는 일로 ko_nlp_tasks.ipynb 에서 발견할 수 있다. 
 - Translation
   영어를 한국어로, 한국어를 영어로 바꾸어주는 프로그램이다. translation_en_kr.ipynb, translation_ko_en.ipynb 참조. 영어를 한국어로 번역하는 pretrained 모델로 Helsinki-NLP/opus-mt-tc-big-en-ko가 작동을 해야 하는데 엉뚱한 결과를 주기 때문에 circulus/kobart-trans-en-ko-v2 를 썼다. 
   - fine-tuned model: chunwoolee0/kd4_opus-mt-ko-en, chunwoolee0/circulus-kobart-en-to-ko
   - datasets used: kde4 en-ko
   - pretrained model ckeckpoint: Helsinki-NLP/opus-mt-ko-en, circulus/kobart-trans-en-ko-v2
 - Causal Language Modeling (koGPT-2)
-   이런 일을 하기 위해 만들어진 것이 GPT이다. skt/kogpt2-v2를 써서 문장 생성하는 예를 역시 ko_nl-_tasks.ipynb 에서 발견할 수 있다. 
+   이런 일을 하기 위해 만들어진 것이 GPT이다. skt/kogpt2-v2를 써서 문장 생성하는 예를 역시 ko_nlp_tasks.ipynb 에서 발견할 수 있다. 
   - Sentence Generation
     - fine-tuned model: chunwoolee0/klue_nli_roberta_base_model
     - datasets used: nsmc
