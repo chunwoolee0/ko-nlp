@@ -38,7 +38,7 @@ Common NLP tasks
     - label: ['entailment', 'contradiction','neutral]
     - pretrained model ckeckpoint: klue/roberta-base
 - Masked Language Modeling
-  이 경우는 "대한민국의 대통령은 [MASK] 이다."와 같이 [MASK]를 채우는 문제인데 jklue/bert-base, klue-roberta-base가 이런 목적으로 만들어진 모델이기 때문에 따로 파인튜닝을 하지 않고 이들 모델을 써서 pipeline을 써서 [MASK]를 찾는 일을 수행할 수 있다. 관련된 작업은 ko_nlp_tasks.ipynb 에서 발견할 수 있다. 
+  이 경우는 "대한민국의 대통령은 [MASK] 이다."와 같이 [MASK]를 채우는 문제인데 klue/bert-base, klue-roberta-base가 이런 목적으로 만들어진 모델이기 때문에 따로 파인튜닝을 하지 않고 이들 모델을 써서 pipeline을 써서 [MASK]를 찾는 일을 수행할 수 있다. 관련된 작업은 ko_nlp_tasks.ipynb 에서 발견할 수 있다. 
   - pretrained model ckeckpoint: klue/roberta-base
 - Summarization
   긴 문장이 있어 읽기 힘들 때 이를 간단히 요약하는 일로 ko_nlp_tasks.ipynb 에서 발견할 수 있다. 
