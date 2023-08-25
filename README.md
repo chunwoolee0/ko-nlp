@@ -43,10 +43,13 @@ Common NLP tasks
 - Summarization
   긴 문장이 있어 읽기 힘들 때 이를 간단히 요약하는 일로 ko_nlp_tasks.ipynb 에서 발견할 수 있다. 
 - Translation
-  영어를 한국어로, 한국어를 영어로 바꾸어주는 프로그램이다. translation_en_kr.ipynb, translation_ko_en.ipynb 참조. 영어를 한국어로 번역하는 pretrained 모델로 Helsinki-NLP/opus-mt-tc-big-en-ko가 작동을 해야 하는데 엉뚱한 결과를 주기 때문에 circulus/kobart-trans-en-ko-v2 를 썼다. 
+  영어를 한국어로, 한국어를 영어로 바꾸어주는 프로그램이다. translation_en_kr.ipynb, translation_ko_en.ipynb 참조. 영어를 한국어로 번역하는 pretrained 모델로 Helsinki-NLP/opus-mt-tc-big-en-ko가 작동을 해야 하는데 엉뚱한 결과를 주기 때문에 처음에는 circulus/kobart-trans-en-ko-v2 를 썼는데 이는 finetuned 모델로 이를 다시 finetuning 했던 것인데, 이후 여러 pretrained model들을 시도하였다. t5 모델의 multilingual version인 mt5, 또는 한국 전자연구소에서 한국어에 대해 pre-train한 ke-t5 모델들을 시도했다. dataset으로는 처음에는 kde4를 썼는데 이 데이터셋으로 ko-en의 경우는 좋은 결과를 얻었지만, 데이터셋을 살펴보면 상당히 많은 오류를 갖고 있기에 bongsoo/news_talk_en_ko로도 일을 했다. 후자의 데이터 셋은 크기가 매우 큰 데이터셋으로 12000000의 크기를 가진다. colab에서 쓸 수 있는 resource의 크기 제한 때문에 1/3의 크기인 400000으로 해서 학습을 하였다. model의 크기보다는 데이터 셋의 크기가 좋은 결과를 준다는 이야기 때문에 크게할 수 있는 가장 크기를 선택한 것이다. 이러다보니 실행 시간이 3시간이 걸린다.  
   - fine-tuned model: chunwoolee0/kd4_opus-mt-ko-en, chunwoolee0/circulus-kobart-en-to-ko
-  - datasets used: kde4 en-ko
-  - pretrained model ckeckpoint: Helsinki-NLP/opus-mt-ko-en, circulus/kobart-trans-en-ko-v2
+    - datasets used: kde4 en-ko
+    - pretrained model ckeckpoint: Helsinki-NLP/opus-mt-ko-en, circulus/kobart-trans-en-ko-v2
+  - fine-tuned model : chunwoolee0/ke_t5_base_bongsoo_en_ko
+    - datasets used: bongsoo/news_talk_en_ko
+    - pretained model checkpoint: KETI-AIR/ke-t5-base
 - Causal Language Modeling (koGPT-2)
    이런 일을 하기 위해 만들어진 것이 GPT이다. skt/kogpt2-v2를 써서 문장 생성하는 예를 역시 ko_nlp_tasks.ipynb 에서 발견할 수 있다. 
   - Sentence Generation
