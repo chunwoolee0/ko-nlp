@@ -50,6 +50,7 @@ Common NLP tasks
   - fine-tuned model : chunwoolee0/ke_t5_base_bongsoo_en_ko
     - datasets used: bongsoo/news_talk_en_ko
     - pretained model checkpoint: KETI-AIR/ke-t5-base
+
 그런데 bongsoo/news_talk_en_ko 데이터셋이 매우 크지만, 이를 가지고도 google/mt5_small 모델의 학습은 여전히 완전히 쓰레기 결과를 준다. 즉 데이터셋의 크기 뿐 아니라, 모델의 질도 매우 중요하다. mT5가 T5를 다언어에 대해 훈련한 모델이라지만, 한국어에 대해서는 별로 유용한 결과를 주지 않는다. 아무리 큰 데이터 셋을 쓰더라도 결과는 바뀌질 않는다. 이런 의미에서 우린 유용한 결과를 주는
 skt의 koBart, 그리고 한국전자연구원의 ke-t5 모델이 정말 고맙다.
 
